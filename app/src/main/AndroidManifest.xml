@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CatalogMovie">
         <activity
-            android:name=".MainActivity"
+            android:name=".feature.main.ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feature.intro.ui.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
