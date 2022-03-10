@@ -15,13 +15,10 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
 
-/**
- * Created by dwiss.purwoko@gmail.com on 16/08/2021.
- */
-
 private const val CACHE_FILE_SIZE: Long = 30 * 1000 * 1000 // 30 Mib
 
-private var baseUrl = "https://www.nataproperty.com/services/AppsServices.asmx/"
+private var baseUrl = "https://api.themoviedb.org/3/"
+const val IMAGE_SOURCE = "https://image.tmdb.org/t/p/w500/"
 
 val retrofitModule = module {
     single<Call.Factory> {

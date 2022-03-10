@@ -35,7 +35,6 @@ import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.LinkedHashMap
 
-
 inline fun CharSequence.isEmail() = Patterns.EMAIL_ADDRESS.matcher(this).matches()
 
 inline fun CharSequence.isIp() = Patterns.IP_ADDRESS.matcher(this).matches()

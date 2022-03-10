@@ -3,10 +3,6 @@ package com.example.catalogmovie.core.di
 import okhttp3.Interceptor
 import okhttp3.Response
 
-/**
- * Created by dwiss.purwoko@gmail.com on 16/08/2021.
- */
-
 class SupportInterceptor : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
