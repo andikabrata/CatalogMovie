@@ -13,7 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CatalogMovie">
         <activity
+            android:name=".feature.detial_content.ui.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".feature.catalog_movie.ui.ListMovie"
+            android:exported="false" />
+        <activity
+            android:name=".feature.catalog_tv.ui.ListTv"
             android:exported="false" />
         <activity
             android:name=".feature.main.ui.MainActivity"

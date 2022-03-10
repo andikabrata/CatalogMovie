@@ -6,16 +6,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.example.catalogmovie.R
 import com.example.catalogmovie.common.extension.gridLayoutManager
-import com.example.catalogmovie.feature.catalog_movie.adapter.MenuAdapter
+import com.example.catalogmovie.feature.catalog_movie.adapter.MenuMovieAdapter
 import com.example.catalogmovie.model.movie.DataMenuExt
-import com.example.catalogmovie.model.movie.MenuProject
+import com.example.catalogmovie.model.menu.MenuProject
 
 
 class MovieFragment : Fragment(), OnItemClickListener {
@@ -23,7 +22,7 @@ class MovieFragment : Fragment(), OnItemClickListener {
     private var listMenu: RecyclerView? = null
 
     val mAdapter by lazy {
-        MenuAdapter()
+        MenuMovieAdapter()
     }
 
     fun MovieFragment() {

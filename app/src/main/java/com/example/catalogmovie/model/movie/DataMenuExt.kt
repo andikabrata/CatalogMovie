@@ -2,6 +2,7 @@ package com.example.catalogmovie.model.movie
 
 import com.example.catalogmovie.R
 import com.example.catalogmovie.feature.catalog_movie.ui.MovieFragment
+import com.example.catalogmovie.model.menu.MenuProject
 
 object DataMenuExt {
 

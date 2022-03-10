@@ -11,4 +11,8 @@
     <string name="popular_movies">"Popular movies "</string>
     <string name="no_internet_connectivity">No Connection</string>
     <string name="try_again">Try Again</string>
+    <string name="popular_tv_shows">Popular TV shows</string>
+    <string name="top_rated_tv_shows">Top rated TV shows</string>
+    <string name="on_air_tv_shows">On the air TV shows</string>
+    <string name="airing_today_tv_shows">Airing today TV shows</string>
 </resources>

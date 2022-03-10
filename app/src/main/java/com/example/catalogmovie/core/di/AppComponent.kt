@@ -1,6 +1,7 @@
 package com.example.catalogmovie.core.di
 
 import com.example.catalogmovie.feature.catalog_movie.di.listMovieViewModel
+import com.example.catalogmovie.feature.catalog_tv.di.listTvViewModel
 
 
 /**
@@ -9,5 +10,6 @@ import com.example.catalogmovie.feature.catalog_movie.di.listMovieViewModel
 val appComponent = listOf(
     coreModule,
     retrofitModule,
-    listMovieViewModel
+    listMovieViewModel,
+    listTvViewModel
 )
