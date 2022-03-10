@@ -102,8 +102,8 @@ Berikut ini cara untuk menjalankan Aplikasi :
 
 <table style="width:100%">
     <tr>
-      <td><img src="https://user-images.githubusercontent.com/94091611/157691455-6d6bef4d-c134-4e71-bc33-193967017ecb.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691455-6d6bef4d-c134-4e71-bc33-193967017ecb.jpg" width="220" height="390" /></td>
-      <td><img src="https://user-images.githubusercontent.com/94091611/157691529-663b43a1-2f73-45ff-a597-b8ffd383a5d3.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691529-663b43a1-2f73-45ff-a597-b8ffd383a5d3.jpg" width="220" height="390" /></td>
-      <td><img src="https://user-images.githubusercontent.com/94091611/157691708-fc0f553c-549b-423d-bc11-e29e56019189.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691708-fc0f553c-549b-423d-bc11-e29e56019189.jpg" width="220" height="390" /></td>
+      <td><img src="https://user-images.githubusercontent.com/94091611/157691455-6d6bef4d-c134-4e71-bc33-193967017ecb.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691455-6d6bef4d-c134-4e71-bc33-193967017ecb.jpg" width="230" height="390" /></td>
+      <td><img src="https://user-images.githubusercontent.com/94091611/157691529-663b43a1-2f73-45ff-a597-b8ffd383a5d3.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691529-663b43a1-2f73-45ff-a597-b8ffd383a5d3.jpg" width="230" height="390" /></td>
+      <td><img src="https://user-images.githubusercontent.com/94091611/157691708-fc0f553c-549b-423d-bc11-e29e56019189.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691708-fc0f553c-549b-423d-bc11-e29e56019189.jpg" width="230" height="390" /></td>
     </tr>
 </table>
