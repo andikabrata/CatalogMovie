@@ -93,10 +93,10 @@ Berikut ini cara untuk menjalankan Aplikasi :
 
 <table style="width:100%">
     <tr>
-      <td><img src="https://user-images.githubusercontent.com/94091611/157689829-5bb65dd9-9539-4e96-a8f0-ef6f40951743.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157689829-5bb65dd9-9539-4e96-a8f0-ef6f40951743.jpg" width="250" height="470" /></td>
-      <td><img src="https://user-images.githubusercontent.com/94091611/157690009-d0e3c8f3-d862-4306-b177-146f2ccbdf2b.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157690009-d0e3c8f3-d862-4306-b177-146f2ccbdf2b.jpg" width="250" height="470" /></td>
-      <td><img src="https://user-images.githubusercontent.com/94091611/157691007-dd0d9d5d-55de-4fb5-974e-3f597cf25407.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691007-dd0d9d5d-55de-4fb5-974e-3f597cf25407.jpg" width="250" height="470" /></td>
-      <td><img src="https://user-images.githubusercontent.com/94091611/157691124-f3488217-04fd-4b21-b17a-a0579fcb2748.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691124-f3488217-04fd-4b21-b17a-a0579fcb2748.jpg" width="250" height="470" /></td>
+      <td><img src="https://user-images.githubusercontent.com/94091611/157689829-5bb65dd9-9539-4e96-a8f0-ef6f40951743.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157689829-5bb65dd9-9539-4e96-a8f0-ef6f40951743.jpg" width="250" height="370" /></td>
+      <td><img src="https://user-images.githubusercontent.com/94091611/157690009-d0e3c8f3-d862-4306-b177-146f2ccbdf2b.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157690009-d0e3c8f3-d862-4306-b177-146f2ccbdf2b.jpg" width="250" height="370" /></td>
+      <td><img src="https://user-images.githubusercontent.com/94091611/157691007-dd0d9d5d-55de-4fb5-974e-3f597cf25407.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691007-dd0d9d5d-55de-4fb5-974e-3f597cf25407.jpg" width="250" height="370" /></td>
+      <td><img src="https://user-images.githubusercontent.com/94091611/157691124-f3488217-04fd-4b21-b17a-a0579fcb2748.jpg" data-canonical-src="https://user-images.githubusercontent.com/94091611/157691124-f3488217-04fd-4b21-b17a-a0579fcb2748.jpg" width="250" height="370" /></td>
     </tr>
 </table>
 
