@@ -6,6 +6,7 @@ import com.example.catalogmovie.core.base.BaseVMActivity
 import com.example.catalogmovie.databinding.ActivityListTvBinding
 import com.example.catalogmovie.feature.catalog_tv.adapter.TvAdapter
 import com.example.catalogmovie.feature.catalog_tv.di.ListTvViewModel
+import com.example.catalogmovie.feature.detial_content.ui.DetailActivity
 
 class ListTv : BaseVMActivity<ListTvViewModel, ActivityListTvBinding>() {
     private var toolbarValue: String = ""
@@ -13,7 +14,12 @@ class ListTv : BaseVMActivity<ListTvViewModel, ActivityListTvBinding>() {
 
     val adapter by lazy {
         TvAdapter() {
-            snackBar("COMING SOON")
+            startActivity<DetailActivity> {
+                putExtra("title",it.name)
+                putExtra("date",it.first_air_date)
+                putExtra("overview",it.overview)
+                putExtra("image_path",it.poster_path)
+            }
         }
     }
 

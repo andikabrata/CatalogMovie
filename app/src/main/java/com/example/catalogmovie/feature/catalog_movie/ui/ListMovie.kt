@@ -6,6 +6,7 @@ import com.example.catalogmovie.core.base.BaseVMActivity
 import com.example.catalogmovie.databinding.ActivityListMovieBinding
 import com.example.catalogmovie.feature.catalog_movie.adapter.MovieAdapter
 import com.example.catalogmovie.feature.catalog_movie.di.ListMovieViewModel
+import com.example.catalogmovie.feature.detial_content.ui.DetailActivity
 
 class ListMovie : BaseVMActivity<ListMovieViewModel, ActivityListMovieBinding>() {
 
@@ -14,7 +15,12 @@ class ListMovie : BaseVMActivity<ListMovieViewModel, ActivityListMovieBinding>()
 
     val adapter by lazy {
         MovieAdapter() {
-            snackBar("COMING SOON")
+            startActivity<DetailActivity> {
+                putExtra("title",it.title)
+                putExtra("date",it.release_date)
+                putExtra("overview",it.overview)
+                putExtra("image_path",it.poster_path)
+            }
         }
     }
 
@@ -30,7 +36,7 @@ class ListMovie : BaseVMActivity<ListMovieViewModel, ActivityListMovieBinding>()
 
         initToolbar(binding.toolbar, toolbarValue, back = true)
 
-        if(typeMovie == "Top Rated Movies"){
+        if (typeMovie == "Top Rated Movies") {
             viewModel.getListTopRatedMovie()
         } else if (typeMovie == "Upcoming Movies") {
             viewModel.getListUpcomingMovie()
