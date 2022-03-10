@@ -1,9 +1,14 @@
 package com.example.catalogmovie.feature.catalog_tv.ui
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.widget.SearchView
+import com.example.catalogmovie.R
 import com.example.catalogmovie.common.extension.*
 import com.example.catalogmovie.core.base.BaseVMActivity
 import com.example.catalogmovie.databinding.ActivityListTvBinding
+import com.example.catalogmovie.feature.OnFilterDialogListener
 import com.example.catalogmovie.feature.catalog_tv.adapter.TvAdapter
 import com.example.catalogmovie.feature.catalog_tv.di.ListTvViewModel
 import com.example.catalogmovie.feature.detial_content.ui.DetailActivity
@@ -35,14 +40,19 @@ class ListTv : BaseVMActivity<ListTvViewModel, ActivityListTvBinding>() {
 
         initToolbar(binding.toolbar, toolbarValue, back = true)
 
-        if(typeTv == "Popular TV shows"){
-            viewModel.getListPopularTv()
-        } else if(typeTv == "Top rated TV shows"){
-            viewModel.getListTopRatedTv()
-        } else if(typeTv == "On the air TV shows"){
-            viewModel.getListOnAirTv()
-        } else if(typeTv == "Airing today TV shows"){
-            viewModel.getListAiringTv()
+        when (typeTv) {
+            "Popular TV shows" -> {
+                viewModel.getListPopularTv()
+            }
+            "Top rated TV shows" -> {
+                viewModel.getListTopRatedTv()
+            }
+            "On the air TV shows" -> {
+                viewModel.getListOnAirTv()
+            }
+            "Airing today TV shows" -> {
+                viewModel.getListAiringTv()
+            }
         }
 
         binding.listTv.apply {
@@ -134,5 +144,56 @@ class ListTv : BaseVMActivity<ListTvViewModel, ActivityListTvBinding>() {
                 }
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_gallery, menu)
+
+        val searchItem = menu?.findItem(R.id.action_search)
+        val searchView = searchItem?.actionView as SearchView
+
+        searchItem.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+            override fun onMenuItemActionExpand(menuItem: MenuItem): Boolean {
+                return true
+            }
+
+            override fun onMenuItemActionCollapse(menuItem: MenuItem): Boolean {
+                when (typeTv) {
+                    "Popular TV shows" -> {
+                        viewModel.getListPopularTv()
+                    }
+                    "Top rated TV shows" -> {
+                        viewModel.getListTopRatedTv()
+                    }
+                    "On the air TV shows" -> {
+                        viewModel.getListOnAirTv()
+                    }
+                    "Airing today TV shows" -> {
+                        viewModel.getListAiringTv()
+                    }
+                }
+                return true
+            }
+        })
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                if (query != null && query.length >= 3) {
+                    binding.listTv.scrollToPosition(0)
+                    adapter.filter.filter(query)
+                    searchView.clearFocus()
+                } else
+                    snackBar("Type at least 3 characters to search")
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return true
+            }
+
+        })
+
+        return true
     }
 }
