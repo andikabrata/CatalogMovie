@@ -1,7 +1,10 @@
 package com.example.catalogmovie.feature.catalog_movie.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.example.catalogmovie.common.extension.loadImage
 import com.example.catalogmovie.core.di.IMAGE_SOURCE
@@ -10,7 +13,7 @@ import com.example.catalogmovie.model.movie.Movie
 
 class MovieAdapter(
     val onItemClicked: (Movie) -> Unit
-) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<MovieAdapter.ViewHolder>(), Filterable {
 
     var list: ArrayList<Movie> = ArrayList()
     var listFiltered: ArrayList<Movie> = ArrayList()
@@ -44,28 +47,28 @@ class MovieAdapter(
 
     inner class ViewHolder(val binding: ItemListMovieBinding) : RecyclerView.ViewHolder(binding.root)
 
-//    override fun getFilter(): Filter {
-//        return object : Filter() {
-//            override fun performFiltering(constraint: CharSequence?): FilterResults {
-//                val charString = constraint?.toString() ?: ""
-//                listFiltered = if (charString.isEmpty()) list else {
-//                    val filteredList = ArrayList<Movie>()
-//                    list.filter {
-//                        it.name!!.lowercase().startsWith(constraint!!)
-//                    }.forEach { filteredList.add(it) }
-//                    filteredList
-//                }
-//                return FilterResults().apply { values = listFiltered }
-//            }
-//
-//            @SuppressLint("NotifyDataSetChanged")
-//            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-//                listFiltered = if (results?.values == null)
-//                    ArrayList()
-//                else
-//                    results.values as ArrayList<Movie>
-//                notifyDataSetChanged()
-//            }
-//        }
-//    }
+    override fun getFilter(): Filter {
+        return object : Filter() {
+            override fun performFiltering(constraint: CharSequence?): FilterResults {
+                val charString = constraint?.toString() ?: ""
+                listFiltered = if (charString.isEmpty()) list else {
+                    val filteredList = ArrayList<Movie>()
+                    list.filter {
+                        it.title!!.lowercase().startsWith(constraint!!)
+                    }.forEach { filteredList.add(it) }
+                    filteredList
+                }
+                return FilterResults().apply { values = listFiltered }
+            }
+
+            @SuppressLint("NotifyDataSetChanged")
+            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                listFiltered = if (results?.values == null)
+                    ArrayList()
+                else
+                    results.values as ArrayList<Movie>
+                notifyDataSetChanged()
+            }
+        }
+    }
 }
