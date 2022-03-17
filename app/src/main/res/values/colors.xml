@@ -17,4 +17,5 @@
     <color name="transparent_black">#30000000</color>
     <color name="common_text">#808080</color>
     <color name="yellow">#F9BB16</color>
+    <color name="grey500">#9E9E9E</color>
 </resources>

@@ -24,6 +24,7 @@ class ListMovie : BaseVMActivity<ListMovieViewModel, ActivityListMovieBinding>()
                 putExtra("date",it.release_date)
                 putExtra("overview",it.overview)
                 putExtra("image_path",it.poster_path)
+                putExtra("vote_average",it.vote_average)
             }
         }
     }
